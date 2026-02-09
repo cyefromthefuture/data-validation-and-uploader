@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCR & Column Splitter</title>
+    <title>OCR & Text Tools</title>
     <link rel="stylesheet" href="style.css">
     <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
 </head>
@@ -18,7 +18,7 @@
         <div id="ocrSection" class="tab-content active">
             <header>
                 <h2>Image to Text</h2>
-                <p>Upload an image to extract text.</p>
+                <p>Upload or <strong>Paste (Ctrl+V)</strong> an image.</p>
             </header>
 
             <div class="input-section">
@@ -47,7 +47,7 @@
         <div id="splitSection" class="tab-content" style="display:none;">
             <header>
                 <h2>Split into Columns</h2>
-                <p>Paste your 2-column data below.</p>
+                <p>Paste 2-column data below (e.g., ID Type).</p>
             </header>
 
             <textarea id="splitInput" placeholder="Paste here...&#10;TCLU7175138 20DV&#10;NYKU3771675 20DV"></textarea>
@@ -55,7 +55,6 @@
             <button id="splitBtn">✂️ Split into 2 Columns</button>
 
             <div class="result-section" id="splitResultContainer" style="display:none;">
-                
                 <div class="columns-wrapper">
                     <div class="column-box">
                         <h3>Column 1</h3>
@@ -69,7 +68,6 @@
                         <button onclick="copyToClipboard('col2Text', this)" class="copy-btn-small">Copy Col 2</button>
                     </div>
                 </div>
-
             </div>
         </div>
 
